@@ -21,6 +21,7 @@ clean:
 
 dep: clean
 
+check: test
 test: all
 	@./xmlread payment.xml
 
