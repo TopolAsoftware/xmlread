@@ -14,7 +14,7 @@ OBJ := $(patsubst %.c, %.o, $(SOURCES))
 all: $(BINNAME)
 
 $(BINNAME): $(OBJ) Makefile
-	$(CC) -o $(BINNAME) $(CFLAGS) $(LIBS) $(OBJ)
+	$(CC) -o $(BINNAME) $(OBJ) $(CFLAGS) $(LIBS)
 
 clean:
 	rm -f *.o *.cgi *~ core *.b $(BINNAME)
