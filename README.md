@@ -1,7 +1,7 @@
 # XMLread easy util
 
-XMLread - command line console util reads XML file (stream), parses, decode text into console locale it and shows as a tree.
-I can be useful for manual checking xmk-files for integrity and content.
+XMLread - command line console util reads XML file (stream), parses, decode text into console locale and shows as a tree.
+I can be useful for manual checking xml-files for integrity and content.
 
 ### Input XML examle
 
