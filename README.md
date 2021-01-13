@@ -1,8 +1,52 @@
-### xmlread easy util
+# XMLread easy util
 
-This is my small and easy util which
-prints XML file in readble and simple
-format.
+XMLread - command line console util reads XML file (stream), parses, decode text into console locale it and shows as a tree.
+I can be useful for manual checking xmk-files for integrity and content.
 
+### Input XML examle
 
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+ <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Body>
+   <ProcessPayment xmlns="http://usmp.com.ua/">
+   <request>
+   <Serial>51G34CYS37ZV9BAD32143</Serial>
+   <KeyWord>qwerty</KeyWord>
+   <Payments xmlns="http://www.unity.net/">
+   <PaymentDetails>
+   <Date>2008-05-28T16:21:16.859375+03:00</Date>
+   <PayElementID>36</PayElementID>
+   <Account>(067)0000000</Account>
+   <Amount>20000</Amount>
+   <ChequeNumber>4</ChequeNumber>
+   </PaymentDetails>
+   </Payments>
+   </request>
+  </ProcessPayment>
+ </soap:Body>
+</soap:Envelope>
+```
 
+### Output tree list
+
+```text
+soap:Envelope
+ xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    |soap:Body
+        |ProcessPayment
+         xmlns="http://usmp.com.ua/"
+            |request
+                |Serial = 51G34CYS37ZV9BAD32143
+                |KeyWord = qwerty
+                |Payments
+                 xmlns="http://www.unity.net/"
+                    |PaymentDetails
+                        |Date = 2008-05-28T16:21:16.859375+03:00
+                        |PayElementID = 36
+                        |Account = (067)0000000
+                        |Amount = 20000
+                        |ChequeNumber = 4
+```
