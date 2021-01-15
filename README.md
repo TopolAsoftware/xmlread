@@ -50,3 +50,12 @@ soap:Envelope
                         |Amount = 20000
                         |ChequeNumber = 4
 ```
+
+## Build Util
+
+To build util you need the devel pacjake of libxml2 lib installed. To build util just run next commands:
+
+```sh
+$ make clean && make
+$ sudo cp xmlread /usr/local/bin/
+```
